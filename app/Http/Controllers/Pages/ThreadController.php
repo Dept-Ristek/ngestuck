@@ -33,6 +33,7 @@ class ThreadController extends Controller
     {
         return view('pages.threads.index', [
             'threads'       => Thread::orderBy('id', 'desc')->paginate(10),
+            'title'         => 'Threads',
         ]);
     }
 
@@ -41,6 +42,7 @@ class ThreadController extends Controller
         return view('pages.threads.create', [
             'categories'    => Category::all(),
             'tags'          => Tag::all(),
+            'title'         => 'Create Thread',
         ]);
     }
 
@@ -75,6 +77,7 @@ class ThreadController extends Controller
             'oldTags'           => $oldTags,
             'categories'        => Category::all(),
             'selectedCategory'  => $selectedCategory,
+            'title'             => 'Edit Thread',
         ]);
     }
 
@@ -113,6 +116,7 @@ class ThreadController extends Controller
             'threads'       => Thread::whereHas('category', function (Builder $q) use ($slug) {
                 $q->where('slug', '=', $slug);
             })->paginate(10),
+            'title'         => 'Popular Threads',
         ]);
     }
 
@@ -126,6 +130,7 @@ class ThreadController extends Controller
 
         return view('pages.threads.index', [
             'threads'       => $threads->paginate(10),
+            'title'         => 'Popular This Week',
         ]);
     }
 
@@ -138,6 +143,7 @@ class ThreadController extends Controller
 
         return view('pages.threads.index', [
             'threads'       => $threads->paginate(10),
+            'title'         => 'Popular All Time',
         ]);
     }
 
@@ -150,6 +156,7 @@ class ThreadController extends Controller
 
         return view('pages.threads.index', [
             'threads'       => $threads->paginate(10),
+            'title'         => 'No Replies',
         ]);
     }
 

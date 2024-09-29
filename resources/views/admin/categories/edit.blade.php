@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-slot name="title">{{ $title }}</x-slot>
 
     {{-- Header --}}
     <x-slot name="header">
@@ -14,7 +15,8 @@
                     {{-- Name --}}
                     <div>
                         <x-form.label for="name" value="{{ __('Nama') }}" />
-                        <x-form.input id="name" class="block w-full mt-1" type="text" name="name" :value="$category->name" required autofocus />
+                        <x-form.input id="name" class="block w-full mt-1" type="text" name="name"
+                            :value="$category->name" required autofocus />
                         <x-form.error for="name" />
                     </div>
 

@@ -17,14 +17,14 @@ class CategoriesTableSeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name'          => 'General',
-                'slug'          => 'general',
+                'name'          => 'Perkuliahan',
+                'slug'          => 'perkuliahan',
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
             ],
             [
-                'name'          => 'Feedback',
-                'slug'          => 'feedback',
+                'name'          => 'Perkodingan',
+                'slug'          => 'perkodingan',
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
             ],
@@ -35,26 +35,8 @@ class CategoriesTableSeeder extends Seeder
                 'updated_at'    => Carbon::now(),
             ],
             [
-                'name'          => 'Technical Assistance',
-                'slug'          => 'technical-assistance',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'name'          => 'Off-topic',
-                'slug'          => 'off-topic',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'name'          => 'Events',
-                'slug'          => 'events',
-                'created_at'    => Carbon::now(),
-                'updated_at'    => Carbon::now(),
-            ],
-            [
-                'name'          => 'Announcements',
-                'slug'          => 'announcements',
+                'name'          => 'Urgent Banget',
+                'slug'          => 'uergent-banget',
                 'created_at'    => Carbon::now(),
                 'updated_at'    => Carbon::now(),
             ],

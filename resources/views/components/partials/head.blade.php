@@ -6,7 +6,7 @@
 <x-social-meta title="Hello World" description="Blade components are awesome!" image="http://example.com/social.jpg" />
 
 {{-- Title --}}
-<title>{{ config('app.name', 'Forum') }}</title>
+<title>{{ $title ?? config('app.name', 'NgeStuck') }}</title>
 
 @livewireStyles
 

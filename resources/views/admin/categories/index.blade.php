@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-slot name="title">{{ $title }}</x-slot>
 
     {{-- Header --}}
     <x-slot name="header">
@@ -7,7 +8,8 @@
         </h2>
     </x-slot>
 
-    <section class="px-6" style="thead tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+    <section class="px-6"
+        style="thead tr th:first-child { border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
     thead tr th:last-child { border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
     
     tbody tr td:first-child { border-top-left-radius: 5px; border-bottom-left-radius: 0px;}

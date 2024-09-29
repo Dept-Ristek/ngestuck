@@ -16,6 +16,8 @@ class NotificationController extends Controller
 
     public function index()
     {
-        return view('dashboard.notifications.index');
+        return view('dashboard.notifications.index', [
+            'title' => 'Notifications',
+        ]);
     }
 }

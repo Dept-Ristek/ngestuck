@@ -14,6 +14,7 @@ class Subscription extends Model
     use HasFactory;
 
     protected $table = 'subscriptions';
+    protected $with = ['userRelation', 'subscriptionAbleRelation'];
 
     public function user(): User
     {

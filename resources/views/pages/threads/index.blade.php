@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <x-slot name="title">{{ $title }}</x-slot>
     <main class="wrapper">
         <section class="grid grid-cols-4 gap-8 mt-8">
             {{-- Sidenavbar --}}
@@ -9,7 +10,7 @@
                 <x-alerts.main />
 
                 @foreach ($threads as $thread)
-                <x-thread :thread="$thread" />
+                    <x-thread :thread="$thread" />
                 @endforeach
 
                 {{-- Pagination --}}

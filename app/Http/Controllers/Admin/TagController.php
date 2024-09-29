@@ -22,13 +22,16 @@ class TagController extends Controller
     {
         return view('admin.tags.index', [
             'tags'  => Tag::all(),
+            'title' => 'Tags'
         ]);
     }
 
 
     public function create()
     {
-        return view('admin.tags.create');
+        return view('admin.tags.create', [
+            'title' => 'Create Tag'
+        ]);
     }
 
 

@@ -21,12 +21,15 @@ class CategoryController extends Controller
     {
         return view('admin.categories.index', [
             'categories'    => Category::all(),
+            'title'         => 'Categories',
         ]);
     }
 
     public function create()
     {
-        return view('admin.categories.create');
+        return view('admin.categories.create',[
+            'title' => 'Create Category'
+        ]);
     }
 
     public function store(Request $request)
@@ -45,7 +48,10 @@ class CategoryController extends Controller
 
     public function edit(Category $category)
     {
-        return view('admin.categories.edit', compact('category'));
+        return view('admin.categories.edit', [
+            'category'  => $category,
+            'title'     => 'Edit Category',
+        ]);
     }
 
     public function update(Request $request, Category $category)

@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable implements MustVerifyEmail, PointAble
+class User extends Authenticatable implements  MustVerifyEmail, PointAble
 {
     use Notifiable;
     use HasFactory;
@@ -47,6 +47,8 @@ class User extends Authenticatable implements MustVerifyEmail, PointAble
         'password',
         'bio',
         'type',
+        'username',
+        'nim',
     ];
 
 

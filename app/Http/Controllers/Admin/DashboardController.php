@@ -17,13 +17,19 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view('admin.dashboard.index');
+        $data = [
+            'title' => 'Dashboard',
+        ];
+        return view('admin.dashboard.index', $data);
     }
 
     public function getActiveUser()
     {
-        $users = Active::users()->get();
+        $data = [
+            'users' => Active::users()->get(),
+            'title' => 'Active User'
+        ];
         
-        return view('admin.users.index', ['users' => $users]);
+        return view('admin.users.index', $data);
     }
 }
